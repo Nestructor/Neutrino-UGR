@@ -1,0 +1,77 @@
+/* body {
+  background-image: linear-gradient(to left,#2573ff73,#ffa50087);
+  height: 100vh;
+} */
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    margin-top: 100px;
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  body > app-root > div > div > div {
+    margin-top: 50px;
+  }
+  
+  .form-control {
+    margin: 12px 0;
+  }
+
+  body > app-root > app-login > div > div {
+    margin-top: 50px;
+  }
+
+  body > app-root > app-login > div > div > h2 {
+    margin: 15px 0px 30px 0px;
+  }
+
+  body > app-root > app-login > div > form {
+    width: 39%;
+    margin: 30px auto;
+  }
+
+  body > app-root > app-login > div > form > button {
+    float: right;
+    margin-top: -30px;
+  }
+
+  body > app-root > app-login > div > form > div.alert.alert-danger.ng-star-inserted {
+    margin-top: 40px;
+  }
+
+  body > app-root > app-login > div > form > div:nth-child(3) {
+    margin-top: 30px;
+  }
+
+
