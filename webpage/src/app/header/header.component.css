@@ -1,3 +1,13 @@
-body > app-root > app-home > app-header > nav > div > a {
+nav > div > a {
     color: white;
 }
+
+#navbarSupportedContent > ul > li > a:hover { 
+    color: rgb(255, 153, 0) !important;
+}
+
+/* .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+} */

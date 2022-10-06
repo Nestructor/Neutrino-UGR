@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthService } from '../service/auth.service'
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-header',
@@ -11,18 +10,16 @@ import Swal from 'sweetalert2';
 })
 export class HeaderComponent implements OnInit {
 
-  usuario!: firebase.default.User
-
   constructor(
-    public afAuth: AngularFireAuth,
-    public router: Router
-  ) { }
+    private authSrv: AuthService, 
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
 
   }
 
-  logout() {
+  async logoutService() {
     const Toast = Swal.mixin({
       toast: true,
       position: 'bottom-end',
@@ -34,18 +31,21 @@ export class HeaderComponent implements OnInit {
         toast.addEventListener('mouseleave', Swal.resumeTimer)
       }
     })
+    try {
+      await this.authSrv.logout()
+      .then((success) => {
+        Toast.fire({
+          icon: 'success',
+          title: 'La sesión se ha cerrado correctamente'
+        })
+        setTimeout(() => { 
+          this.router.navigate(['/login'])
+        }, 1000);
+      })  
+    } catch(error) {
+      console.log(error)
+    }
 
-    this.afAuth.signOut()
-    .then((success) => {
-      Toast.fire({
-        icon: 'success',
-        title: 'La sesión se ha cerrado correctamente'
-      })
-    })
-
-    setTimeout(() => { 
-      this.router.navigate(['/login'])
-    }, 1000);
   }
 
 }

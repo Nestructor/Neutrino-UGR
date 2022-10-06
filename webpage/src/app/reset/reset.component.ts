@@ -66,6 +66,9 @@ export class ResetComponent implements OnInit {
           icon: 'success',
           title: 'Le hemos enviado un correo de recuperación de la contraseña'
         })
+        setTimeout(() => {
+          this.router.navigate(['/login']) 
+        }, 2000);
       })
       .catch((error) => {
         Toast.fire({
@@ -73,9 +76,6 @@ export class ResetComponent implements OnInit {
           title: '¡Oops! Ha ocurrido algún error al intentar enviarle un correo de recuperación de la contraseña'
         })
       })
-      setTimeout(() => {
-        this.router.navigate(['/login']) 
-      }, 2000);
     } catch(error) {
       console.log(error)
     }

@@ -5,7 +5,8 @@ div > div {
 div > div > h4 {
     margin: 50px 0px 30px 0px;
     text-align: center;
-    color: white;
+    /* color: white; */
+    color: black;
 }
 
 div > form {
@@ -14,7 +15,8 @@ div > form {
 }
 
 div > div:nth-child(2) {
-    background: #51575e;
+    background: #51575e47;
+    /* background: #51575ee3; */
     padding: 1px;
     margin: 40px 300px;
     height: 280px;
