@@ -16,6 +16,19 @@ import { ResetComponent } from './reset/reset.component';
 import { HomeComponent } from './home/home.component';
 import { ComponenteComponent } from './componente/componente.component';
 import { AuthService } from './service/auth.service';
+import { ResearchComponent } from './research/research.component';
+import { MembersComponent } from './members/members.component';
+import { NewsComponent } from './news/news.component';
+import { PublicationsComponent } from './publications/publications.component';
+import { TalksComponent } from './talks/talks.component';
+import { ThesisComponent } from './thesis/thesis.component';
+import { FooterComponent } from './footer/footer.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { LegalComponent } from './legal/legal.component';
+import { CookiesComponent } from './cookies/cookies.component';
+import { ContactComponent } from './contact/contact.component';
+import { ErrorComponent } from './error/error.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -26,7 +39,19 @@ import { AuthService } from './service/auth.service';
     HeaderComponent,
     ResetComponent,
     HomeComponent,
-    ComponenteComponent
+    ComponenteComponent,
+    ResearchComponent,
+    MembersComponent,
+    NewsComponent,
+    PublicationsComponent,
+    TalksComponent,
+    ThesisComponent,
+    FooterComponent,
+    PrivacyComponent,
+    LegalComponent,
+    CookiesComponent,
+    ContactComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +66,7 @@ import { AuthService } from './service/auth.service';
   providers: [
     AngularFireAuth,
     AuthService,
+    CookieService
   ],
   exports: [
     NgxSpinnerModule,
